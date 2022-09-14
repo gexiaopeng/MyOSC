@@ -1,4 +1,4 @@
-name: Test
+name: Test Build
 
 on:
   schedule:
@@ -15,11 +15,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - userName: q215613905
+          - userName: gexiaopeng
             repoName: TVBoxOS
-            branchName: main
-          - userName: takagen99
-            repoName: Box
             branchName: main
     steps:
       - name: Checkout

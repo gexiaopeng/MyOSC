@@ -1,11 +1,6 @@
 name: Test Build
 
 on:
-  schedule:
-    - cron: 15,45 0-18,22-23 * * *
-  push:
-    branches:
-      - master
   workflow_dispatch:
 
 jobs:

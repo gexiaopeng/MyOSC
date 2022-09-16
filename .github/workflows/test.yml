@@ -111,12 +111,4 @@ jobs:
         if: ${{ env.commit }}
         run: |
           rm -rf TVBoxOSC
-          sed -i "/${{ matrix.userName }}\/${{ matrix.repoName }}/s#Updated: [a-zA-Z0-9]*#Updated: ${{ env.commit }}#" README.md
-          sed -i '/url =/d' ./.git/config
-          git config --local user.name "gexiaopeng"
-          git config --local user.email "gexiaopeng@tom.com"
-          git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
-          git add --all
-          git commit -m "${{ env.commit }}"
-          git push -u -f origin master
-   
+ 

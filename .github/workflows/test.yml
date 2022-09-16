@@ -28,8 +28,10 @@ jobs:
             echo "commitS=${commit:0:7}" >> $GITHUB_ENV
           fi
       - name: Checkout Source Code and Zip
+       
         if: ${{ env.commit }}
         run: |
+          echo "comm-${{ env.commit }}";
           git clone ${{ env.upStream }} TVBoxOSC
           cd TVBoxOSC
           git checkout ${{ env.commit }}

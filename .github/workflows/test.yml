@@ -114,7 +114,7 @@ jobs:
           sed -i "/${{ matrix.userName }}\/${{ matrix.repoName }}/s#Updated: [a-zA-Z0-9]*#Updated: ${{ env.commit }}#" README.md
           sed -i '/url =/d' ./.git/config
           git config --local user.name "github-actions[bot]"
-          git config --local user.email "gexiaopeng@tom.com"
+          git config --local user.email gexiaopeng@tom.com
           git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git add --all
           git commit -m "${{ env.commit }}"

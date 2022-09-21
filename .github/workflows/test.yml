@@ -1,4 +1,4 @@
-name: Test Build
+name: TVBox Build
 
 on:
   workflow_dispatch:
